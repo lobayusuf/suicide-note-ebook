@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suicide Note - A Story of Hope and Healing by Loba Yusuf</title>
+    <meta name="description" content="Follow Eliora's journey from despair to hope in Lagos. A powerful Nigerian fiction about mental health, depression, and finding reasons to live.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .hidden { display: none !important; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    </style>
+</head>
+<body class="bg-white">
+    
+    <!-- Sales Page -->
+    <div id="salesPage">
+        <!-- Navigation -->
+        <nav class="fixed w-full bg-white shadow-sm z-50 top-0">
+            <div class="max-w-7xl mx-auto px-4 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                        <span class="text-2xl font-bold text-gray-900">Suicide Note</span>
+                    </div>
+                    <button onclick="handlePurchase()" class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700">Buy Now</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="pt-32 pb-20 px-4 bg-gradient-to-br from-red-50 to-white">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    #1 Nigerian Mental Health Fiction
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    A Story of Darkness, Hope, and Healing
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Follow Eliora's journey from the edge of despair to finding community, purpose, and reasons to live in Lagos, Nigeria.
+                </p>
+                
+                <div class="flex items-center justify-center space-x-2 mb-8">
+                    <div class="flex">
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <span class="text-gray-600 font-semibold">4.9/5 from 127 readers</span>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="handlePurchase()" class="bg-red-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 shadow-lg">
+                        Buy Now - ₦2,500
+                    </button>
+                    <button onclick="scrollToPreview()" class="border-2 border-red-600 text-red-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-red-50">
+                        Read Preview
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Inside -->
+        <section class="py-20 px-4 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">What's Inside</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-red-600 text-2xl">✓</span>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Raw, Honest Portrayal</h3>
+                            <p class="text-gray-600">Depression in Nigeria told without filters or sugarcoating</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="text-red-600 text-2xl">✓</span>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Journey to Hope</h3>
+                            <p class="text-gray-600">From despair to community and healing in Lagos</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="text-red-600 text-2xl">✓</span>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Mental Health Resources</h3>
+                            <p class="text-gray-600">Crisis support information for Nigerian readers</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="text-red-600 text-2xl">✓</span>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">10 Powerful Chapters</h3>
+                            <p class="text-gray-600">Complete story of transformation and recovery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview Section -->
+        <section id="preview" class="py-20 px-4 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-4">Preview the First Chapter</h2>
+                <p class="text-xl text-gray-600 text-center mb-12">Read before you buy</p>
+                
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Chapter One: The Note Begins</h3>
+                    <div class="prose prose-lg max-w-none text-gray-700 mb-8">
+                        <p>"I'm writing this because I need someone to understand. Not my mother, who will cry and ask what she did wrong. Not my father, who will wonder where he failed as a man..."</p>
+                        <p class="text-sm text-gray-500 italic mt-4">Preview continues with full first chapter. Purchase to read all 10 chapters.</p>
+                    </div>
+                    
+                    <div class="border-t pt-6">
+                        <p class="text-sm font-semibold mb-3">Already purchased? Enter your access code:</p>
+                        <div class="flex gap-3">
+                            <input type="text" id="accessCode" placeholder="Enter access code" class="flex-1 px-4 py-3 border rounded-lg"/>
+                            <button onclick="checkAccess()" class="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800">Access Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="py-20 px-4 bg-red-600 text-white">
+            <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div><div class="text-4xl font-bold mb-2">127+</div><div class="text-red-100">Happy Readers</div></div>
+                <div><div class="text-4xl font-bold mb-2">4.9/5</div><div class="text-red-100">Average Rating</div></div>
+                <div><div class="text-4xl font-bold mb-2">10</div><div class="text-red-100">Chapters</div></div>
+                <div><div class="text-4xl font-bold mb-2">₦2,500</div><div class="text-red-100">One Payment</div></div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section id="reviews" class="py-20 px-4 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">What Readers Are Saying</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border">
+                        <div class="flex mb-3">
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        </div>
+                        <p class="text-gray-700 mb-4">This book saved my life. The honest portrayal of depression in Nigeria is exactly what we need.</p>
+                        <p class="font-semibold">- Chioma A.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border">
+                        <div class="flex mb-3">
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        </div>
+                        <p class="text-gray-700 mb-4">Captures the Lagos experience perfectly - the isolation in crowds, the pressure to succeed.</p>
+                        <p class="font-semibold">- Tunde O.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border">
+                        <div class="flex mb-3">
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        </div>
+                        <p class="text-gray-700 mb-4">Raw, honest, and hopeful. It's time we start having real conversations about mental health.</p>
+                        <p class="font-semibold">- Amara K.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Affiliate -->
+        <section class="py-20 px-4 bg-gradient-to-br from-green-50 to-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                    💰 Earn ₦1,250 Per Sale
+                </div>
+                <h2 class="text-4xl font-bold mb-4">Become an Affiliate Partner</h2>
+                <p class="text-xl text-gray-600 mb-8">Earn 50% commission on every sale. Share a book that matters.</p>
+                
+                <div class="bg-white rounded-xl shadow-xl p-8 max-w-2xl mx-auto">
+                    <div class="bg-green-50 border-2 border-green-200 rounded-lg p-6 mb-6">
+                        <p class="text-gray-700 italic">"I've earned <span class="font-bold text-green-600">₦47,000 in 2 months</span> just by sharing this book on Twitter."</p>
+                        <p class="font-semibold mt-2">- Tunde O., Affiliate</p>
+                    </div>
+                    
+                    <div class="flex gap-3">
+                        <input type="email" id="affiliateEmail" placeholder="Enter your email" class="flex-1 px-4 py-3 border rounded-lg"/>
+                        <button onclick="generateAffiliate()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 font-bold whitespace-nowrap">Get Link</button>
+                    </div>
+                    <div id="affiliateResult" class="hidden mt-4 p-4 bg-green-50 rounded-lg">
+                        <p class="text-sm font-semibold mb-2">Your affiliate link:</p>
+                        <code id="affiliateLink" class="text-sm text-green-600 break-all"></code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20 px-4 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">FAQ</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl p-6 shadow">
+                        <h3 class="font-bold text-lg mb-2">Can I download the ebook?</h3>
+                        <p class="text-gray-600">No, this is web-based. You get an access code to read online anytime.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow">
+                        <h3 class="font-bold text-lg mb-2">How does the affiliate program work?</h3>
+                        <p class="text-gray-600">Share your unique link and earn 50% (₦1,250) per sale via Paystack in 7 days.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow">
+                        <h3 class="font-bold text-lg mb-2">What payment methods do you accept?</h3>
+                        <p class="text-gray-600">All major cards, bank transfers, and USSD through Paystack.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-20 px-4 bg-gradient-to-br from-red-600 to-red-800 text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Read Eliora's Story?</h2>
+                <p class="text-xl mb-8">Join 127+ readers who found hope and connection</p>
+                <button onclick="handlePurchase()" class="bg-white text-red-600 px-12 py-4 rounded-full text-xl font-bold hover:bg-gray-100 shadow-2xl">
+                    Buy Now - ₦2,500
+                </button>
+                <p class="mt-6 text-red-100">✓ Instant access ✓ Read anytime ✓ Secure payment</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12 px-4">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">About</h3>
+                    <p class="text-gray-400 text-sm">A powerful Nigerian fiction exploring mental health and healing.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-3">Crisis Resources</h3>
+                    <p class="text-gray-400 text-sm">Nigeria Emergency: 112<br/>Lagos: 767</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-3">Connect</h3>
+                    <p class="text-gray-400 text-sm">support@suicidenote.com<br/>@loba_yusuf on X</p>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-gray-800 text-gray-400 text-sm">
+                © 2026 Loba Yusuf. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Thank You Page -->
+    <div id="thankYouPage" class="hidden min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+        <div class="bg-white shadow-sm">
+            <div class="max-w-4xl mx-auto px-4 py-4">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                    <span class="text-2xl font-bold">Suicide Note</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 py-12">
+            <!-- Success Card -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
+                <div class="bg-gradient-to-r from-green-600 to-green-700 px-8 py-12 text-center text-white">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-4xl font-bold mb-4">🎉 Payment Successful!</h1>
+                    <p class="text-xl">Your access code is ready</p>
+                </div>
+
+                <div class="p-8">
+                    <div class="bg-blue-50 rounded-xl p-8 border-2 border-blue-200 mb-6">
+                        <h2 class="text-2xl font-bold text-center mb-4">Your Access Code</h2>
+                        <div class="bg-white rounded-lg p-6 mb-4">
+                            <div class="flex items-center justify-between flex-wrap gap-3">
+                                <code id="displayCode" class="text-2xl md:text-3xl font-mono font-bold text-blue-600"></code>
+                                <button onclick="copyCode()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Copy</button>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button onclick="startReading()" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-700 shadow-lg">
+                                Start Reading Now →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Affiliate Pitch -->
+            <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl shadow-2xl overflow-hidden mb-8">
+                <div class="px-8 py-12 text-white">
+                    <div class="text-center mb-8">
+                        <div class="inline-block bg-yellow-400 text-gray-900 px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+                            ⚡ WAIT! ONE MORE THING...
+                        </div>
+                        <h2 class="text-4xl font-bold mb-4">Want to Earn Your Money Back?</h2>
+                        <p class="text-xl">Share this book and earn ₦1,250 (50%) per sale</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-8 text-gray-900">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Get Your Affiliate Link</h3>
+                        <div class="flex flex-col sm:flex-row gap-3 mb-4">
+                            <input type="email" id="tyEmail" placeholder="Enter your email" class="flex-1 px-4 py-3 border-2 rounded-lg"/>
+                            <button onclick="generateTYAffiliate()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 font-bold whitespace-nowrap">
+                                Get Link →
+                            </button>
+                        </div>
+                        <div id="tyAffiliateResult" class="hidden">
+                            <div class="bg-green-50 rounded-lg p-6 border-2 border-green-200">
+                                <p class="font-semibold mb-2">Your affiliate link:</p>
+                                <code id="tyAffiliateLink" class="text-sm text-green-600 break-all block mb-3"></code>
+                                <button onclick="copyTYLink()" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Copy Link</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="backHome()" class="text-gray-600 hover:text-gray-900 underline">← Back to Homepage</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handlePurchase() {
+            alert('Redirecting to Paystack...\n\nPrice: ₦2,500\nYou will receive:\n• Access code via email\n• Instant online access');
+            setTimeout(showThankYou, 1000);
+        }
+
+        function showThankYou() {
+            const code = 'SN-' + Math.random().toString(36).substring(2, 10).toUpperCase();
+            document.getElementById('displayCode').textContent = code;
+            document.getElementById('salesPage').classList.add('hidden');
+            document.getElementById('thankYouPage').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        function backHome() {
+            document.getElementById('thankYouPage').classList.add('hidden');
+            document.getElementById('salesPage').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        function copyCode() {
+            const code = document.getElementById('displayCode').textContent;
+            navigator.clipboard.writeText(code);
+            alert('Access code copied!');
+        }
+
+        function startReading() {
+            alert('Opening full book...\n\nIn production, this opens the complete ebook reader with all 10 chapters.');
+        }
+
+        function checkAccess() {
+            const code = document.getElementById('accessCode').value;
+            if (code.toLowerCase() === 'demo123' || code.startsWith('SN-')) {
+                alert('✓ Access granted! Opening full book...');
+            } else {
+                alert('Invalid code. Check your email after purchase.');
+            }
+        }
+
+        function generateAffiliate() {
+            const email = document.getElementById('affiliateEmail').value;
+            if (!email) { alert('Please enter your email'); return; }
+            const link = 'https://suicidenote.com/?ref=' + Math.random().toString(36).substring(7);
+            document.getElementById('affiliateLink').textContent = link;
+            document.getElementById('affiliateResult').classList.remove('hidden');
+            alert('✓ Affiliate link generated!\n\nEarn ₦1,250 per sale.\nCommissions paid in 7 days.');
+        }
+
+        function generateTYAffiliate() {
+            const email = document.getElementById('tyEmail').value;
+            if (!email) { alert('Please enter your email'); return; }
+            const link = 'https://suicidenote.com/?ref=' + Math.random().toString(36).substring(7);
+            document.getElementById('tyAffiliateLink').textContent = link;
+            document.getElementById('tyAffiliateResult').classList.remove('hidden');
+        }
+
+        function copyTYLink() {
+            const link = document.getElementById('tyAffiliateLink').textContent;
+            navigator.clipboard.writeText(link);
+            alert('Affiliate link copied!');
+        }
+
+        function scrollToPreview() {
+            document.getElementById('preview').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
